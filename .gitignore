@@ -1,0 +1,33 @@
+# Rust build artifacts
+/target
+anime-manga-cli/target
+server/target
+
+# Rust backup files
+**/*.rs.bk
+
+# Cargo lock (keep for binaries, remove for libraries)
+# Cargo.lock
+
+# Environment variables
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary manga pages
+/tmp/manga-pages/
+
+# Log files
+*.log
+
+# Binary outputs
+anime-manga-cli/target/
+server/target/

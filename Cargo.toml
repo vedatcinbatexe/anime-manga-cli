@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "anime-manga-cli",
+    "server",
+]
+
+resolver = "2"
