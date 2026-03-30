@@ -92,8 +92,6 @@ cargo run -p anime-manga-cli # Terminal 2 — start TUI
 └──────────────────────────────────┘
 ```
 
-```
-
 ## ⚠️ Disclaimer
 
 This tool is for educational purposes only. It does not host, store, or distribute any media content. All content is fetched from third-party public APIs. Users are responsible for complying with the terms of service of any content provider and the copyright laws of their country.
@@ -103,4 +101,3 @@ This project is not affiliated with MangaDex, AllAnime, or any content provider.
 ## 📝 License
 
 MIT License — see [LICENSE](LICENSE) for details.
-```
