@@ -35,16 +35,16 @@ sudo apt install feh chafa mpv -y
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/anime-manga-cli.git
+git clone https://github.com/vedatcinbatexe/anime-manga-cli.git
 cd anime-manga-cli
 
-# Build
-cargo build --release -p manga
+# Build both crates
+cargo build --release -p anime-manga-cli
 cargo build --release -p server
 
-# Run (needs two terminals)
-cargo run -p server   # Terminal 1 — start API server
-cargo run -p manga    # Terminal 2 — start TUI
+# Run (open two terminals)
+cargo run -p server          # Terminal 1 — start API server
+cargo run -p anime-manga-cli # Terminal 2 — start TUI
 ```
 
 ## 🎮 Usage
@@ -70,7 +70,7 @@ cargo run -p manga    # Terminal 2 — start TUI
 
 **Anime Episodes**
 
-- `Enter` — fetch stream qualities
+- `Enter` — fetch available stream qualities
 - Pick resolution → mpv opens fullscreen
 
 **Manga Chapters**
@@ -81,19 +81,21 @@ cargo run -p manga    # Terminal 2 — start TUI
 ## 🏗️ Architecture
 
 ```
-┌─────────────────────────────┐
-│      manga crate (TUI)      │
-│  ratatui · crossterm        │
-│  MangaDex API (manga)       │
-│  HTTP client → server       │
-└──────────────┬──────────────┘
+┌─────────────────────────────────┐
+│   anime-manga-cli crate (TUI)   │
+│   ratatui · crossterm           │
+│   MangaDex API (manga)          │
+│   HTTP client → local server    │
+└──────────────┬──────────────────┘
                │ HTTP localhost:8080
-┌──────────────▼──────────────┐
-│     server crate (API)      │
-│  axum · reqwest             │
-│  AllAnime GraphQL scraper   │
-│  m3u8 stream URL decoder    │
-└─────────────────────────────┘
+┌──────────────▼──────────────────┐
+│      server crate (API)         │
+│      axum · reqwest             │
+│      AllAnime GraphQL scraper   │
+│      m3u8 stream URL decoder    │
+└──────────────────────────────────┘
+```
+
 ```
 
 ## ⚠️ Disclaimer
@@ -105,3 +107,4 @@ This project is not affiliated with MangaDex, AllAnime, or any content provider.
 ## 📝 License
 
 MIT License — see [LICENSE](LICENSE) for details.
+```
