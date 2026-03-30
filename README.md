@@ -14,10 +14,6 @@ A blazing fast ⚡ terminal media player for anime streaming and manga reading, 
 - ⚡ **Local API server** — scrapes AllAnime GraphQL API, decodes stream URLs
 - 🎯 **Quality picker** — choose your preferred resolution before playing
 
-## 📸 Preview
-
-> Add your screen recording or screenshots here
-
 ## 🛠️ Requirements
 
 - [Rust](https://rustup.rs/) (1.75+)
